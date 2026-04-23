@@ -27,7 +27,7 @@ El software implementa un **Patrón de Arquitectura por Capas**, lo que permite 
 │   ├── persistencia.py    # Capa de Persistencia
 │   └── presentacion.py    # Capa de Presentación
 └── US_Accidents_data.csv  # Dataset de referencia
-
+```
 
 ## 🚀 Pruebas y Ejecución
 El proyecto incluye un Parser que permite probar cada capa de manera aislada para verificar su funcionamiento:
