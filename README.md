@@ -27,3 +27,44 @@ El software implementa un **Patrón de Arquitectura por Capas**, lo que permite 
 │   ├── persistencia.py    # Capa de Persistencia
 │   └── presentacion.py    # Capa de Presentación
 └── US_Accidents_data.csv  # Dataset de referencia
+
+
+## 🚀 Pruebas y Ejecución
+El proyecto incluye un Parser que permite probar cada capa de manera aislada para verificar su funcionamiento:
+
+1. Probar Capa de Datos (Aislada)
+Ejecuta un query SQL directo a la base de datos:
+
+Bash
+python main.py --layer data --query "SELECT State, COUNT(*) FROM accidentes_data GROUP BY State LIMIT 3;"
+2. Probar Capa de Persistencia (Generación SQL)
+Verifica que la IA genere el código SQL correctamente sin tocar la base de datos:
+
+Bash
+python main.py --layer persistencia
+3. Probar Capa de Negocio (Health Check IA)
+Verifica la conexión y cuotas con la API de Gemini:
+
+Bash
+python main.py --layer negocio
+4. Probar Capa de Presentación
+Inicia el menú interactivo sin procesar lógica de fondo:
+
+Bash
+python main.py --layer presentacion
+5. Flujo Completo
+Ejecuta la aplicación completa (entrada de usuario -> IA -> DB -> Respuesta final):
+
+Bash
+python main.py --layer all
+
+🛠️ Tecnologías Utilizadas
+Lenguaje: Python 3.13
+IA: Google Gemini API (google-genai)
+Base de Datos: MySQL
+Arquitectura: Diseño por Capas (Cohesión y Desacoplamiento)
+
+## 👤 Autor
+Mayra Gonzalez Martinez - a01769543@tec.mx
+
+Tecnológico de Monterrey
