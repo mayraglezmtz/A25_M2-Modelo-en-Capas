@@ -47,7 +47,7 @@ python main.py --layer presentacion
 6. Flujo Completo
 python main.py --layer all
 
-##🛠️ Tecnologías Utilizadas
+## 🛠️ Tecnologías Utilizadas
 Lenguaje: Python 3.13
 IA: Google Gemini API (google-genai)
 Base de Datos: MySQL
